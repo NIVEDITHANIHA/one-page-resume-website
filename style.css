@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  
+}
+.show {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  z-index: 2;
+  transition: 0.5s;
+  background-image: linear-gradient(rgba(7, 7, 7, 0.76),rgba(128, 8, 40, 0.781)) ,url("cwallpaper.jpg");
+  background-size: cover;
+}
+.show.active {
+  right: 300px;
+}
+.show header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 3rem;
+  line-height: 2rem;
+}
+
+.toggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: url("h.png");
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position: center;
+  cursor: pointer;
+}
+.toggle.active {
+  background: url("p.png");
+  background-repeat: no-repeat;
+  background-size: 65px;
+  background-position: center;
+  cursor: pointer;
+}
+.text {
+  position: relative;
+  z-index: 10;
+}
+.text h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 4rem;
+  text-transform: uppercase;
+}
+.text p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 20px 0;
+  max-width: 700px;
+  letter-spacing: 2px;
+}
+.text a {
+  display: inline-block;
+  font-size: 1rem;
+  background-color: white;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: black;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover {
+  letter-spacing: 6px;
+  background-color: black;
+  color: white;
+}
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:rgba(212, 9, 60, 0.863);  
+}
+.menu ul {
+  position: relative;
+  list-style: none;
+ 
+}
+.menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: white;
+  margin: 2rem;
+  line-height: 3em;
+  
+}
+.menu ul li a:hover {
+  color: rgba(64, 18, 233, 0.863);
+}
+
+
+@media (max-width: 768px) {
+  .show header,
+  .show  {
+  padding: 50px;  
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .text h2 {
+    font-size: 1rem;
+  }
+}
